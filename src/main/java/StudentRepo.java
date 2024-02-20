@@ -13,6 +13,13 @@ public class StudentRepo {
         return student;
     }
 
+    public Student findById(String id) {
+        Student student = students.get(id);
+        if (student == null) {
+            throw new NoSuchElementException("No student found with ID: " + id);
+        }
+        return student;
+    }
     public Optional<Student> findStudentById(String id) {
         return Optional.ofNullable(students.get(id));
     }

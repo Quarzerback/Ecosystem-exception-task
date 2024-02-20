@@ -11,6 +11,10 @@ public class StudentService {
     }
 
     public List<Student> getAllStudents(){
-        return repo.getAllStudents();
-    }
+        return repo.getAllStudents();}
+
+        public Student findStudentById(String id) {
+            return repo.findById(id);
+        }
+
 }
